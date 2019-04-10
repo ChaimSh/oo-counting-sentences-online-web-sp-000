@@ -20,7 +20,8 @@ new_array = []
      c.split(".","!","?")
      new_array << c
    end
-
+  new_array.delete_if{|e| e.length == 0}
+  new_array.count
    #.reject! { |c| c.empty? }.count
   end
 end
