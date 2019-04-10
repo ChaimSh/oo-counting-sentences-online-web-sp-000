@@ -15,8 +15,8 @@ self.end_with?("!")
   end
 
   def count_sentences
-   self.to_i.split(".","?").delete_if{|e| e.length == 0}.count
-
+   self.split(".","?","!")
+binding.pry
   #delete_if{|e| e.length == 0}
    #.reject! { |c| c.empty? }.count
   end
