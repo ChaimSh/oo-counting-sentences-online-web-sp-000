@@ -15,13 +15,12 @@ self.end_with?("!")
   end
 
   def count_sentences
-new_array = []
-   self.each do |c|
-     c.split(".","!","?")
-     new_array << c
-   end
-  new_array.delete_if{|e| e.length == 0}
-  new_array.count
+   c = self
+   a = self.split(".","!","?")
+   a.delete_if{|e| e.length == 0}
+   a.count
+
+  #delete_if{|e| e.length == 0}
    #.reject! { |c| c.empty? }.count
   end
 end
